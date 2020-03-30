@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPagePrincipal.master.cs" Inherits="Agendamento.MasterPagePrincipal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header><h1>Agendamento UNIP</h1>
+        <nav> 
+            <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Bold="True" Font-Names="Verdana" Font-Size="Medium" ForeColor="#284E98" Orientation="Horizontal" StaticSubMenuIndent="10px">
+                <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#B5C7DE" />
+                <DynamicSelectedStyle BackColor="#507CD1" />
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/index.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem Text="Cadastro" Value="Cadastro" NavigateUrl="~/coordenadores.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Auditórios" Value="Auditórios" NavigateUrl="~/Auditorio.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Cursos" Value="Cursos"></asp:MenuItem>
+                    <asp:MenuItem Text="Relatórios" Value="Relatórios"></asp:MenuItem>
+                    <asp:MenuItem Text="Agendamento" Value="Agendamento"></asp:MenuItem>
+                    <asp:MenuItem Text="Sair" Value="Sair" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <StaticSelectedStyle BackColor="#507CD1" />
+            </asp:Menu>
+        </nav>
+        </header>
+        <main>        
+            <div style="width: 511px">            
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">            
+                    
+                </asp:ContentPlaceHolder>        
+            </div>
+        </main>
+        <footer>
+            <p> Site desenvolvido por alunos 
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="www.unip.com.br" Target="_blank">UNIP</asp:HyperLink>
+            </p>
+        </footer>
+    </form>
+</body>
+</html>
